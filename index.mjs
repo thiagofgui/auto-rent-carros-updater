@@ -156,7 +156,7 @@ app.get('/carros', async (req, res) => {
       const trim = await fetchRandomTrim(make, year);
 
       carros.push({
-        imageUrl: imagensParaUsar[i],
+        imageUrl: imagensParaUsar[i].imageUrl,
         marcaModelo: `${trim.model_name}`,
         ano: trim.model_year,
         valorDiario: `R$${(Math.random() * 180 + 120).toFixed(2)}/dia`,
@@ -167,7 +167,7 @@ app.get('/carros', async (req, res) => {
       });
     }
 
-    res.json(shuffle(cache).slice(0, quantidade));
+    res.json(carros);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: err.message });
