@@ -1,0 +1,12 @@
+{
+  "name": "Carros Updater",
+  "id": "auto-rent-carros-updater",
+  "api": "1.0.0",
+  "main": "code.js",
+  "editorType": ["figma"],
+  "networkAccess": {
+    "allowedDomains": ["http://localhost:3333"],
+    "devAllowedDomains": ["localhost"],
+    "reasoning": "Precisamos buscar dados de carros e PNGs de imagem"
+  }
+}
